@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  var arr = [
+    {id: 1, name: 'a'},
+    {id: 2, name: 'b'},
+    {id: 3, name: 'c'},
+    {id: 4, name: 'd'},
+    {id: 5, name: 'e'},
+  ]
+  obj = [
+    {id: 3, name: 'z'},
+    {id: 4, name: 'y'},
+    {id: 5, name: 'y'},
+  ]
+
+
+  obj.forEach((oitem, oindex) => {
+    arr.forEach((val, index) => {
+      if (oitem.id == val.id) {
+        arr.splice(index, 1)
+        return arr
+      }
+    })
+  })
+  console.log(arr)
+
+  console.log(Number(null))
+</script>
+</body>
+</html>
